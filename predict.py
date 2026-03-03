@@ -74,6 +74,4 @@ def predict_phonemes(
         logits       = model(input_values=input_values).logits
 
     phonemes_batch = decode_ctc_predictions(logits.cpu(), processor)
-    phonemes       = phonemes_batch[0] if phonemes_batch else []
-
-    return ' '.join(phonemes)
+    return phonemes_batch[0] if phonemes_batch else ''

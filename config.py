@@ -61,8 +61,8 @@ LSVSC_CONFIG = {
 }
 
 L2_ARCTIC_CONFIG = {
-    'use_for_training': False,
-    'use_for_validation': False,
+    'use_for_training': True,
+    'use_for_validation': True,
     'use_for_testing': True,
     # Options: 'vietnamese_only', 'all_speakers', 'non_viet_train_viet_test'
     'mode': 'non_viet_train_viet_test',
@@ -88,14 +88,14 @@ MODEL_NAME = "facebook/wav2vec2-xls-r-300m"
 # TRAINING HYPERPARAMETERS
 # ============================================================================
 TRAINING_CONFIG = {
-    'learning_rate': 1e-4,
+    'learning_rate': 2e-5,
     'weight_decay': 0.005,
     'num_train_epochs': 100,
 
     # VRAM optimisation
-    'per_device_train_batch_size': 6,
-    'per_device_eval_batch_size': 6,
-    'gradient_accumulation_steps': 8,
+    'per_device_train_batch_size': 1,
+    'per_device_eval_batch_size': 1,
+    'gradient_accumulation_steps': 1,
     'gradient_checkpointing': False,
 
     # Speed optimisation

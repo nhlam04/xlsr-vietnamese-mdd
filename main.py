@@ -77,9 +77,19 @@ def main():
     print('='*70)
 
     splits = load_all_datasets()
-    train_list = splits['train']
-    val_list   = splits['val']
-    test_lists = splits['test']   # dict: { 'timit': [...], 'lsvsc': [...], 'l2arctic': [...] }
+    # load_all_datasets returns a tuple: (train_data, val_data, test_data, ...)
+    train_list, val_list, test_list = splits[0], splits[1], splits[2]
+
+    # Assign a meaningful key so downstream logic knows which split this is
+    # (controls ARPAbet mapping and MDD metric computation)
+    from config import L2_ARCTIC_CONFIG as _L2CFG
+    if _L2CFG['use_for_testing']:
+        _test_key = 'l2arctic'
+    elif test_list:
+        _test_key = 'timit'
+    else:
+        _test_key = 'test'
+    test_lists = {_test_key: test_list}
 
     print('\n  Data splits:')
     print_split_summary('train', train_list)
