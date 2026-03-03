@@ -1,0 +1,34 @@
+# Core ML
+torch>=2.0.0
+torchaudio>=2.0.0
+transformers>=4.36.0
+datasets>=2.14.0
+
+# Audio
+librosa>=0.10.0
+soundfile>=0.12.0
+
+# Phoneme / text processing
+jiwer>=3.0.0
+editdistance>=0.6.3
+underthesea>=6.8.0
+vinorm>=2.0.4
+eng_to_ipa>=0.0.2
+
+# Numeric / utility
+numpy>=1.24.0
+einops>=0.7.0
+psutil>=5.9.0
+
+# GPU / memory
+pynvml>=11.5.0
+
+# Experiment tracking
+wandb>=0.16.0
+
+# Quantisation (optional, for bitsandbytes-backed training)
+bitsandbytes>=0.41.0
+
+# Jupyter (for running the original notebook)
+ipykernel>=6.25.0
+notebook>=7.0.0
