@@ -28,9 +28,9 @@ TIMIT_ARPABET_ORIGINAL = {
     # Fricatives
     'f', 'v', 'th', 'dh', 's', 'z', 'sh', 'zh', 'hh', 'hv',
     # Nasals (incl. syllabic)
-    'm', 'n', 'ng', 'em', 'en', 'eng', 'nx',
+    'm', 'n', 'ng', 'nx',
     # Approximants (incl. syllabic)
-    'l', 'r', 'w', 'y', 'el',
+    'l', 'r', 'w', 'y',
     # Flap / other
     'dx', 'wh',
 }
