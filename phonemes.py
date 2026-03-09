@@ -57,8 +57,8 @@ VIETNAMESE_XSAMPA_ORIGINAL = {
 # Conflict-resolution mapping for Vietnamese X-SAMPA symbols that overlap with
 # ARPAbet labels but represent different phonemes.
 VI_PHONEME_PREFIX_MAP: Dict[str, str] = {
-    'b':   'B',    # Vietnamese /ɓ/ implosive  vs ARPAbet /b/
-    'd':   'D',    # Vietnamese /ɗ/ implosive  vs ARPAbet /d/
+    'b':   'b*',    # Vietnamese /ɓ/ implosive  vs ARPAbet /b/
+    'd':   'd*',    # Vietnamese /ɗ/ implosive  vs ARPAbet /d/
     'h':   'hh',
     'N':   'ng',
     'a':   'aa',
@@ -71,6 +71,25 @@ VI_PHONEME_PREFIX_MAP: Dict[str, str] = {
     'ts_': 'tS',
     'S':   's',
     'dZ':  'z',
+    'G':   'g*',
+    'e':   'eh*',
+    'J':   'n*',
+    'Nm':  'n*',
+    'o':   'uh*',
+    'M':   'uw*',
+    'a_X': 'aa*',
+    'E_X': 'aa*',
+    '7':   'ah*',
+    '7_X': 'ah*',
+    'O_X': 'ao*',
+    'ie':  'ih ax',  # Vietnamese diphthong /iə/ → two labels
+    'kp':  'k*',    #TODO overlapping with x
+    'M7':  'uw* ax',  # Vietnamese diphthong /ɯə/ → two labels
+    't_h': 't*',
+    'tS':  't sh',  #TODO this is the canonical only, ppl needed
+    'uo':  'uw ax',
+    'wp':  'w*',
+    'x':   'k*',
 }
 
 # Silence / non-speech labels that should be filtered from all datasets
